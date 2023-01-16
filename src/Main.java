@@ -6,22 +6,14 @@ public class Main {
 
         Scanner vvod = new Scanner(System.in);
 
-        System.out.print("Insert sum of your credit: ");
+        System.out.println("Введите сумму взятых в кредит денег, ежемесячный платеж, процентную ставку, тип клиента ");
 
-        Float credit = vvod.nextFloat();
+        String parametrs = vvod.nextLine();
 
-        System.out.print("Insert your month pay: ");
-
-        Float pay = vvod.nextFloat();
-
-        System.out.println("Insert your type of client: ");
-
-        String type = vvod.nextLine();
+        enum p  { String.split(parametrs) }
 
 
-
-
-        switch (type){
+     /*   switch (type){
             case ("human"):
                 Types_of_Credits.for_human();
                 break;
@@ -30,8 +22,7 @@ public class Main {
                 Types_of_Credits.for_Business();
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + type);
+                throw new IllegalStateException("Unexpected value: " + type);*/
         }
 
     }
-}
