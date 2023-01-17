@@ -8,7 +8,7 @@ public class Main {
         // Назначаем новый сканнер
         Scanner vvod = new Scanner(System.in);
 
-        System.out.println("Введите сумму взятых в кредит денег, ежемесячный платеж, процентную ставку, тип клиента. Разделители - пробелы");
+        System.out.println("\nВведите сумму взятых в кредит денег, ежемесячный платеж, процентную ставку, тип клиента.\n Разделители - пробелы\n");
 
         //Считываем введенные пользователям данные
         String parametrs = vvod.nextLine();
@@ -36,12 +36,13 @@ public class Main {
 
         switch (type_of_client) {
             case ("human"):
-                Types_of_Credits.for_human();
+                Types_of_Credits.for_human(Summa_kredita, Egemesyachniy_platej, Procent,  type_of_client);
                 break;
 
-            case ("Business"):
-                Types_of_Credits.for_Business();
+            case ("business"):
+                Types_of_Credits.for_business(Summa_kredita, Egemesyachniy_platej, Procent,  type_of_client);
                 break;
+
             default:
                 System.out.println("Неверно указан тип клиента: " + type_of_client);
                 break;
