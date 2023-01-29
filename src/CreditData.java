@@ -6,30 +6,27 @@ import java.util.Scanner;
 
 public class CreditData {
 
-    String vvedennieDannie;
-    float summaCredita;
-    float egemesyachniyPlatej;
-    float procent;
+    String enteredString;
+    float amountOfCredit;
+    float monthlyPayment;
+    float percentageRate;
     String typeOfClient;
 
+    void enteringCreditParametrs() {
 
-    void vvodParametrs() {
-
-        Scanner vvod = new Scanner(System.in);
-        vvedennieDannie = vvod.nextLine();
+        Scanner input = new Scanner(System.in);
+        enteredString = input.nextLine();
         System.out.println();
     }
 
-    void setParametrs () {
+    void setParametrs() {
 
-        String[] subparametrs = vvedennieDannie.split(" ");
+        String[] splitedString = enteredString.split(" ");
 
-        summaCredita = Float.parseFloat(subparametrs[0]);
-        egemesyachniyPlatej = Float.parseFloat(subparametrs[1]);
-        procent = Float.parseFloat(subparametrs[2]);
-        typeOfClient = subparametrs[3];
-
+        amountOfCredit = Float.parseFloat(splitedString[0]);
+        monthlyPayment = Float.parseFloat(splitedString[1]);
+        percentageRate = Float.parseFloat(splitedString[2]);
+        typeOfClient = splitedString[3];
     }
-
 }
 
